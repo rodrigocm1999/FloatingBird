@@ -1,0 +1,44 @@
+canvas {
+	position: relative;
+	display: block;
+	border: 1px solid #d3d3d3;
+	background-color: #f1f1f1;
+	width: 900px;
+}
+body {
+	width: 90%;
+	margin: auto auto;
+	font-size: 18px;
+}
+.left {
+	width: 60%;
+	float: left;
+}
+.right {
+	margin: 50px auto;
+	width: 20%;
+	float: right;
+}
+
+#muteImg {
+	width: 30px;
+	border: 2px solid #d3d3d3;
+}
+.imgFendas img {
+	width: 60px;
+	height: 90px;
+	padding: 6px;
+}
+
+.selected {
+	border: 2px solid black;
+}
+
+input[type="range"] {
+	writing-mode: bt-lr; /* IE */
+	-webkit-appearance: slider-vertical; /* WebKit */
+}
+
+.size{
+	height: 500px;
+}
