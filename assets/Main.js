@@ -103,7 +103,10 @@ function ToggleMute() {
 }
 let ready = true;
 document.onkeypress = function (event) {
-	if (event.key === "r") startGame();
+	if (event.key === "r") {
+		document.getElementById('heightSlider').value = 50;	
+		startGame();
+	}
 };
 
 document.onkeyup = function () {
