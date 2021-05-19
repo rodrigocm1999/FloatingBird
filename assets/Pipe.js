@@ -30,17 +30,6 @@ class Pipe {
         return false;
     }
     draw() {
-        /*//Tubo de baixo
-        this.canvas.drawImage(this.sprite, 0, 0, 138, this.height + (this.division + this.gap), this.posx, this.division + this.gap, 50, this.division);
-        //Tubo de cima
-        this.canvas.drawImage(this.sprite, 138, 0, 138, 793, this.posx, this.division + this.gap, 50, this.division);*/
-        /*
-        this.canvas.fillStyle = "#AAA";
-        this.canvas.fillRect(this.posx, 0, this.width, this.division);
-        //Tubo Acima
-        this.canvas.fillRect(this.posx, this.division + this.gap, this.width, this.aux);
-        //Tubo Abaixo
-        */
         for (let i = 0; i < this.parts.length; i++) {
             canvas.fillStyle = "#0A0";
             this.parts[i].Show();

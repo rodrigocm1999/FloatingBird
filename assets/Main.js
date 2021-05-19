@@ -37,9 +37,7 @@ function startGame() {
 
 		highScoreElement = document.getElementById("HighScore");
 
-		timer = setInterval(function () {
-			RunGame();
-		}, msPerFrame);
+		timer = setInterval(function () {RunGame();}, msPerFrame);
 	}
 }
 
@@ -88,14 +86,12 @@ ToggleMute();
 function ToggleMute() {
 	let audios = document.getElementsByTagName("audio");
 	if (muteCheck === false) {
-		document
-			.getElementById("muteImg")
+		document.getElementById("muteImg")
 			.setAttribute("src", "assets/imgsou/mute.png");
 		for (let i = 0; i < audios.length; i++) audios[i].muted = true;
 		muteCheck = true;
 	} else {
-		document
-			.getElementById("muteImg")
+		document.getElementById("muteImg")
 			.setAttribute("src", "assets/imgsou/sound.png");
 		for (let i = 0; i < audios.length; i++) audios[i].muted = false;
 		muteCheck = false;

@@ -10,7 +10,6 @@ class Circle {
         canvas.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
         canvas.fill();
         canvas.stroke();
-
     }
 
     Intersects_Rect(rect) {

@@ -20,36 +20,22 @@ class Bird {
 			let currentPos = this.bird.y;
 
 			let change = this.expectedPos - currentPos;
-
 			let percentageToChange = 0.05;
-
 			let interpolated = currentPos + change * percentageToChange;
 
 			this.vel = interpolated - currentPos;
 			this.bird.y = interpolated;
 		}
 	}
-
-	map(value, inMin, inMax, outMin, outMax) {
-		return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
-	}
-
 	draw() {
 		canvas.save();
-
 		canvas.translate(this.bird.x, this.bird.y);
-
-		let degrees = this.map(this.vel, -20, 20, -1, 1) * 90;
+		let degrees = this.vel / 18 * 90;
 		canvas.rotate((degrees * Math.PI) / 180);
-
-		canvas.drawImage(
-			this.img,
-			-this.birdSizeX / 2,
-			-this.birdSizeY / 2,
-			this.birdSizeX,
-			this.birdSizeY
+		canvas.drawImage(this.img,
+			-this.birdSizeX / 2,-this.birdSizeY / 2,
+			this.birdSizeX,	this.birdSizeY
 		);
-
 		canvas.restore();
 	}
 	move(height) {
@@ -66,10 +52,8 @@ class Bird {
 		if (this.d) {
 			document.getElementById("hit").play();
 			return;
-		} else if (
-			this.posx + this.size > pipe.posx &&
-			this.posx < pipe.posx + pipe.width
-		) {
+		} else if (this.posx + this.size > pipe.posx
+				&&	this.posx < pipe.posx + pipe.width) {
 			//Alinhado com o tubo
 			pipe.aligned = true;
 		} else if (pipe.aligned === true) {
